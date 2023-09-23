@@ -1,0 +1,12 @@
+.bottom__conteiner{
+  height: 6vh;
+  width: 100%;
+  background-color: var(--colorC);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 2px var(--colorD);
+  padding: 0 1.2rem;
+  font-size: .8rem;
+  color: var(--colorE);
+}

@@ -1,0 +1,58 @@
+.top__conteiner{
+  height: 20vh;
+  width: 100%;
+  background-color: var(--colorC);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  border-bottom: solid 2px var(--colorD);
+}
+.top__left{
+  margin-right: 2rem;
+  color: var(--colorE);
+}
+.pigCounter{
+  height: 4rem;
+  width: 4rem;
+  background-color: white;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 200;
+  box-shadow: 0px 0px 15px var(--colorE);
+}
+.pigCounter__face{
+  position: absolute;
+  z-index: 100;
+  width: 3rem;
+  filter: drop-shadow(2px 2px 10px white);
+}
+.pigAppear{
+  animation: appearPig 1s ease;
+}
+/*Animation*/
+@keyframes appearPig {
+  0%{
+    transform: rotate(45deg);
+  }
+  50%{
+    transform: translate(1.8rem,-1.8rem)rotate(45deg);
+  }
+  100%{
+    transform: rotate(45deg);
+  }
+  
+}
+/*Animation*/
+.pigCounter__number{
+  color: var(--colorF);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.top__right{
+  margin-left: 2rem;
+  color: var(--colorE);
+}

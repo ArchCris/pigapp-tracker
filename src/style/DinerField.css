@@ -1,0 +1,11 @@
+.dinerField__conteiner{
+  height: 3.2rem;
+  padding: .1rem;
+  width: 100%;
+  background-color: var(--colorA);
+  margin-bottom: .35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 2px var(--colorD)
+}

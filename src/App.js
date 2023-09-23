@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import {Helmet} from "react-helmet";
+import TopSection from './components/TopSection';
+import MiddleSection from './components/MiddleSection';
+import BottomSection from './components/BottomSection';
+import { useState } from 'react';
 
 function App() {
+
+  const[diners,setDiners]=useState(0)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helmet>
+        <meta charSet="utf-8" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <title>My Title</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+      <TopSection props={{diners:diners,setDiners:setDiners}}/>
+      <MiddleSection diners={diners}/>
+      <BottomSection/>
     </div>
   );
 }
