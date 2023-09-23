@@ -6,8 +6,8 @@ const MiddleSection = ({diners}) => {
 
   return (
     <ul className='middle__conteiner'>
-      {[...Array(diners)].map(()=>{
-        return <DinerField props={diners}/>
+      {[...Array(diners)].map((node,key)=>{
+        return <DinerField key={key} props={diners}/>
       })}
     </ul>
   )

@@ -17,6 +17,7 @@ const TopSection = (props) => {
 
   const soundMove = () =>{
     play()
+    
     pigCounter__face.classList.add('pigAppear')
   }
 
