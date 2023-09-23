@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import '../style/DinerField.css'
 import { useCalculateMoney } from '../hooks/useCalculateMoney'
 import pigFace from '../assets/pig.png'
