@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-        <meta charSet="utf-8" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <title>My Title</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
