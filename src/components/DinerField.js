@@ -10,9 +10,6 @@ const DinerField = (props) => {
   const[value,setValue]=useState('')
   const[name,setName]=useState('Diner '+props.props)
 
-  useEffect(() => {
-    calculateMoney(props.props)
-  }, [props.props]);
 
   return (
     <li  className='dinerField__conteiner'>
