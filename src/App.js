@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <title>My Title</title>
+        <title>PigApp</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <TopSection props={{diners:diners,setDiners:setDiners}}/>

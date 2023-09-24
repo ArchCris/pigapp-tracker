@@ -18,12 +18,12 @@ export const useCalculateMoney = () => {
       let result = (totalPaidMoney/diners)-arrayPaidMoney[i]
 
       nodeRestMoney[i].innerHTML=Math.abs(result.toFixed(2))
-      let signo = Math.sign(result)
-      if(signo===1){
-        nodeRestMoney[i].previousSibling.innerHTML='Debo'
+      
+      if(Math.sign(result)===1){
+        nodeRestMoney[i].previousSibling.innerHTML='I owe'
         nodeRestMoney[i].style.color='red'
-      }else if(signo===-1){
-        nodeRestMoney[i].previousSibling.innerHTML='Me deben'
+      }else if(Math.sign(result)===-1){
+        nodeRestMoney[i].previousSibling.innerHTML='They owe me'
         nodeRestMoney[i].style.color='green'
       }else if(result===0){
         nodeRestMoney[i].innerHTML='😁'

@@ -2,13 +2,23 @@ import React, { useState } from 'react'
 import '../style/DinerField.css'
 import { useCalculateMoney } from '../hooks/useCalculateMoney'
 import pigFace from '../assets/pig.png'
+import { useEffect } from 'react'
 
-const DinerField = (props) => {
+const DinerField = ({props}) => {
+
+  
+
+  
 
   const calculateMoney = useCalculateMoney()
 
   const[value,setValue]=useState('')
-  const[name,setName]=useState('Diner '+props.props)
+  const[name,setName]=useState('Diner '+props)
+
+  useEffect(() => {
+    calculateMoney(props)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props]);
 
 
   return (
@@ -19,11 +29,11 @@ const DinerField = (props) => {
         <input className='dinnerName' type='text' onClick={()=>{setName('')}} onChange={(e)=>{setName(e.target.value)}} value={name} />
       </div>
       <div className='dinerField__pay'>
-        <p>Pague</p>
-        <input className='paidMoney' type='number' onClick={()=>{setValue('')}} onChange={(e)=>{setValue(e.target.value);calculateMoney(props.props)}} value={value} />
+        <p>Paid</p>
+        <input className='paidMoney' type='number' onClick={()=>{setValue('')}} onChange={(e)=>{setValue(e.target.value);calculateMoney(props)}} value={value} />
       </div>
       <div className='dinerField__due'>
-        <p>Me deben</p>
+        <p>They owe me</p>
         <span className='restMoney'>0</span>
       </div>
     </li>
